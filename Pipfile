@@ -5,8 +5,11 @@ name = "pypi"
 
 [packages]
 dwave-ocean-sdk = "*"
+numpy = "*"
+typer = "*"
 
 [dev-packages]
+ipython = "*"
 
 [requires]
 python_version = "3.9"
