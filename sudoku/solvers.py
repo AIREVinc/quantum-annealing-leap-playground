@@ -88,12 +88,12 @@ def solve_by_qpu_subproblem_sampler(bqm) -> hybrid.SampleSet:
 def solve_sudoku(
         bqm: dimod.BinaryQuadraticModel,
         mat: list[list[int]],
-        solver_name: str = 'quantum_sa'
+        solver_name: str = 'qpu'
 ) -> tuple[list[list[int]], float]:
     solver = {
         'tabu': solve_by_tabu_search,
         'sa': solve_by_sa,
-        'quantum_sa': solve_by_qpu_subproblem_sampler,
+        'qpu': solve_by_qpu_subproblem_sampler,
         'kerberos': solve_by_kerberos,
     }.get(solver_name, solve_by_qpu_subproblem_sampler)
 

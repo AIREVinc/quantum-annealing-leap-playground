@@ -58,7 +58,7 @@ def is_correct(matrix: list[list[int]]):
     return True
 
 
-def get_label(row, col, digit):
+def var_repr(row, col, digit):
     """Returns a string of the cell coordinates and the cell value in a
     standard format.
     """

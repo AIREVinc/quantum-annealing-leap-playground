@@ -17,13 +17,13 @@ from __future__ import print_function
 import typer
 
 from puzzle import get_matrix, is_correct
-from models import build_original_bqm, build_bqm
+from models import build_bqm
 from solvers import solve_sudoku
 
 
 def main(
         filename: str = "problem.txt",
-        solver_name: str = "quantum_sa",
+        solver_name: str = "qpu",
 ):
     mat = get_matrix(filename)
     bqm = build_bqm(mat)
